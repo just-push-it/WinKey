@@ -10,6 +10,10 @@
   },
   "author": "Alan Litz",
   "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/just-push-it/WinKey"
+  },
   "devDependencies": {
     "node-gyp": "^4.0.0"
   },

@@ -23,7 +23,6 @@ void sendSpecialKey(const unsigned short &code) {
     INPUT in[2];
     in[0].type = INPUT_KEYBOARD;
     in[0].ki.wVk = code;
-    //in[0].ki.dwFlags = WM_KEYDOWN;
 
     in[1] = in[0];
     in[1].ki.dwFlags |= KEYEVENTF_KEYUP;
@@ -96,24 +95,4 @@ Napi::Object winkey::Init(Napi::Env env, Napi::Object exports) {
     exports.Set("pressKeys", Napi::Function::New(env, winkey::PressKeysWrapped));
 
     return exports;
-}
-
-unsigned short winkey::getKeyCodeFromString(std::string input) {
-    if(sKeys.find(input) != sKeys.end()) {
-        return sKeys.at(input);
-    }
-    char c[1];
-    strcpy(c, input.c_str());
-    return VkKeyScanExW(c[0], GetKeyboardLayout(0));
-    /*
-    if(input.length() == 1) {
-        char c[1];
-        strcpy(c, input.c_str());
-        return VkKeyScanExA(c[0], GetKeyboardLayout(0));
-    } else {
-        if(sKeys.find(input) != sKeys.end()) {
-            return sKeys.at(input);
-        }
-        return 0;
-    }*/
 }

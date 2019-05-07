@@ -12,6 +12,7 @@ I was developing a very niche Electron application and robotjs was not yet updat
 
 You may send one character at a time, or a whole string.
 There are special keys which require the use of specific codes:
+
 | Physical Key | Special Code |
 |--------------|--------------|
 | Enter/Return | @@return     |
@@ -20,6 +21,7 @@ There are special keys which require the use of specific codes:
 | Space Bar    | @@space      |
 | Delete       | @@delete     |
 | Tab          | @@tab        |
+
 These codes must be sent by themselves, and not in the middle of another string.
 
 >winkey.pressKeys("@@backspace");

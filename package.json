@@ -1,5 +1,5 @@
 {
-  "name": "winkey",
+  "name": "winkeys",
   "version": "0.1.0",
   "description": "Native virtual key input functionality for Windows",
   "main": "winkey.js",

@@ -1,6 +1,6 @@
 {
   "name": "winkey",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Native virtual key input functionality for Windows",
   "main": "winkey.js",
   "gypfile": true,
